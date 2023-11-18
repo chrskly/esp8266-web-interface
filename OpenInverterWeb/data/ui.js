@@ -32,6 +32,8 @@ var ui = {
 	// Status of visibility of parameter categories. E.g. Motor, Inverter. true = visible, false = not visible.
 	categoryVisible: {},
 
+	navbarIsBig: true,
+
 	shrinkNavbar: function() {
 		document.getElementById("navbar").style.width = "80px";
 		var cw = document.getElementById("content-wrapper");
@@ -41,7 +43,7 @@ var ui = {
 		logo.style.width = "80px";
 		logo.style.height = "50px";
 		// buttons
-		var buttons = document.getElementsByClassName("buttonimg");
+		var buttons = document.getElementsByClassName("navimg");
 		for ( let i = 0; i < buttons.length; i++ ) {
 			console.log("button ", i, " ", buttons[i]);
 			buttons[i].style.width = "60px";
@@ -52,6 +54,7 @@ var ui = {
 			console.log("item ", i, " ", itemsToHideOnSmallScreen[i]);
 			itemsToHideOnSmallScreen[i].style.display = "none";
 		}
+		ui.navbarIsBig = false;
 	},
 
 	growNavbar: function() {
@@ -63,7 +66,7 @@ var ui = {
 		logo.style.width = "180px";
 		logo.style.height = "100px";
 		// buttons
-		var buttons = document.getElementsByClassName("buttonimg");
+		var buttons = document.getElementsByClassName("navimg");
 		for ( let i = 0; i < buttons.length; i++ ) {
 			buttons[i].style.width = "24px";
 		}
@@ -71,6 +74,17 @@ var ui = {
 		var itemsToShowOnBigScreen = document.getElementsByClassName("small-screen-hide");
 		for ( let i = 0; i < itemsToShowOnBigScreen.length; i++ ) {
 			itemsToShowOnBigScreen[i].style.display = "block";
+		}
+		ui.navbarIsBig = true;
+	},
+
+	toggleNavbar: function() {
+		if ( ui.navbarIsBig ) {
+			ui.shrinkNavbar();
+			ui.navbarIsBig = false;
+		} else {
+			ui.growNavbar();
+			ui.navbarIsBig = true;
 		}
 	},
 
@@ -343,7 +357,7 @@ var ui = {
       // run the poll function every 2 seconds
       if (enable) {
         autoReloadCheckbox.checked = true;
-        ui.autoRefreshHandle = setInterval(ui.refresh, 2000);
+        ui.autoRefreshHandle = setInterval(ui.refresh, 4000);
       }
       else {
         autoReloadCheckbox.checked = false;

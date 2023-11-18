@@ -109,30 +109,30 @@
 		<aside id="navbar" class="navbar">
 
 			<div id="logo">
-				<img src="logo.png">
+				<img src="logo.png" onclick="ui.toggleNavbar();">
 			</div>
 
             <div>
 				<a class="tablink" onclick="ui.openPage('dashboard', this, 'white')" style="background-color:white">
-					<img class="buttonimg" src="/icon-grid.png"><p class="navbar-text">DASHBOARD</p></a>
+					<img class="navimg" src="/icon-grid.png"><p class="navbar-text">DASHBOARD</p></a>
 				<a class="tablink" onclick="ui.openPage('update', this, 'white')">
-					<img class="buttonimg" src="/icon-cpu.png"><p class="navbar-text">UPDATE</p></a>
+					<img class="navimg" src="/icon-cpu.png"><p class="navbar-text">UPDATE</p></a>
 				<a class="tablink" onclick="ui.openPage('parameters', this, 'white')">
-					<img class="buttonimg" src="/icon-sliders.png"><p class="navbar-text">PARAMETERS</p></a>
+					<img class="navimg" src="/icon-sliders.png"><p class="navbar-text">PARAMETERS</p></a>
 				<a class="tablink" onclick="ui.openPage('spotvalues', this, 'white')">
-					<img class="buttonimg" src="/icon-target.png"><p class="navbar-text">SPOT VALUES</p></a>
+					<img class="navimg" src="/icon-target.png"><p class="navbar-text">SPOT VALUES</p></a>
 				<a class="tablink" onclick="ui.openPage('plot', this, 'white')">
-					<img class="buttonimg" src="/icon-activity.png"><p class="navbar-text">PLOT & GAUGE</p></a>
+					<img class="navimg" src="/icon-activity.png"><p class="navbar-text">PLOT & GAUGE</p></a>
 				<a class="tablink" onclick="ui.openPage('logger', this, 'white')">
-					<img class="buttonimg" src="/icon-database.png"><p class="navbar-text">DATA LOGGER</p></a>
+					<img class="navimg" src="/icon-database.png"><p class="navbar-text">DATA LOGGER</p></a>
 				<a class="tablink" onclick="ui.openPage('canmapping', this, 'white')">
-					<img class="buttonimg" src="/icon-repeat.png"><p class="navbar-text">CAN MAPPING</p></a>
+					<img class="navimg" src="/icon-repeat.png"><p class="navbar-text">CAN MAPPING</p></a>
 				<a class="tablink" onclick="ui.openPage('wifi', this, 'white')">
-					<img class="buttonimg" src="/icon-wifi.png"><p class="navbar-text">WIFI SETTINGS</p></a>
+					<img class="navimg" src="/icon-wifi.png"><p class="navbar-text">WIFI SETTINGS</p></a>
 				<a class="tablink" onclick="ui.openPage('files', this, 'white')">
-					<img class="buttonimg" src="/icon-file-text.png"><p class="navbar-text">FILES</p></a>
+					<img class="navimg" src="/icon-file-text.png"><p class="navbar-text">FILES</p></a>
 				<a class="tablink" onclick="ui.openPage('support', this, 'white')">
-					<img class="buttonimg" src="/icon-help-circle.png"><p class="navbar-text">SUPPORT</p></a>
+					<img class="navimg" src="/icon-help-circle.png"><p class="navbar-text">SUPPORT</p></a>
 			</div>
 
 			<!-- spinner div -->
@@ -318,8 +318,8 @@
 									<th>Name</th>
 									<th>Value</th>
 									<th>Unit</th>
-									<th>Minimum</th>
-									<th>Maximum</th>
+									<th>Min</th>
+									<th>Max</th>
 									<th>Default</th>
 								</tr>
 							</thead>
@@ -387,7 +387,7 @@
 
 					<div class="main-left">
 						<h2 id="plot">Plot</h2>
-						<canvas id="canvas" width=100 height=40></canvas>
+						<canvas id="canvas" width="100%" height=40></canvas>
 						<p>
 						<p>Copyright 2018 Johannes Huebner dev@johanneshuebner.com</p>
 						<p>Charting by <a href="http://chartjs.org/" target="_blank">chart.js</a></p>

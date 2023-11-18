@@ -142,6 +142,7 @@ html, body {
 #navbar p {
     margin: 0;
     vertical-align: middle;
+    line-height: 34px;
 }
 
 /* Logo */
@@ -172,6 +173,7 @@ html, body {
     margin: 0px;
     margin-left: 10px;
     margin-bottom: 10px;
+    margin-top: 10px;
     text-align: center;
     float: left;
     width: 160px;
@@ -273,7 +275,7 @@ button:hover, input[type=file]:hover, input[type=button]:hover {
 }
 
 .buttonimg {
-    padding: 0 10px 0 10px;
+    padding: 0 10px 0 0;
 }
 
 input[type=file], input[type=button] {
@@ -392,7 +394,7 @@ tr:hover {
     height: 100%;
     padding-top: 10px;
     order: 3;
-    flex: 0 0 320px;
+    flex: 0 0 240px;
 }
 
 /* dashboard */
@@ -554,7 +556,7 @@ tr:hover {
 
 #beta-features-toggle-div {
     position: absolute;
-    bottom: 35px;
+    bottom: 40px;
     padding: 0px;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -690,7 +692,8 @@ input:checked + .slider:before {
         width: 80px;
         height: 50px;
     }
-    .buttonimg {
+    .navimg {
+    /*.buttonimg {*/
         width: 60px;
     }
     .small-screen-hide {
